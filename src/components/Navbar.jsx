@@ -11,11 +11,11 @@ function Navbar() {
 
         <Link className="navbar-brand d-flex align-items-center" to="/">
           <img
-            src="https://i.pinimg.com/280x280_RS/68/a8/8a/68a88a262ecdfe478dc2294f01251873.jpg"
-            alt="ShoppEase Logo"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5nCR6FLazQxF0nRwwr2xHzxCFs2OVxRVjYQ&s"
+            alt=""
             style={{ width: "55px", height: "55px", borderRadius: "12px" }}
           />
-          <span className="ms-2 fw-bold">ShoppEase</span>
+          <span className="ms-2 fw-bold">Fashion Frenzy</span>
         </Link>
 
         <button

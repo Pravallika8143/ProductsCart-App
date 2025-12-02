@@ -1,4 +1,4 @@
-.home-box {
+/* .home-box {
   text-align: center;
   padding: 40px 20px;
 }
@@ -21,4 +21,21 @@
   color: #444;
   max-width: 700px;
   margin: 10px auto;
+} */
+
+
+.carousel-img {
+  height: 450px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.carousel-caption h3 {
+  font-weight: bold;
+  text-shadow: 2px 2px 8px #000;
+}
+
+.carousel-caption p {
+  font-size: 1.1rem;
+  text-shadow: 2px 2px 8px #000;
 }
