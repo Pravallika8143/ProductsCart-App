@@ -13,7 +13,7 @@ function Navbar() {
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5nCR6FLazQxF0nRwwr2xHzxCFs2OVxRVjYQ&s"
             alt=""
-            style={{ width: "75px", height: "55px", borderRadius: "15px" }}
+            style={{ width: "75px", height: "55px", borderRadius: "15px"}}
           />
           <span className="ms-2 fw-bold">Fashion Frenzy</span>
         </Link>
