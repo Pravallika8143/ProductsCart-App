@@ -23,28 +23,79 @@ function ProductsPage() {
     alert("Item added to cart!");
   };
 
-  if (loading) return <h2>Loading...</h2>;
+  if (loading) return <h2 className="text-center mt-5">Loading...</h2>;
 
   return (
-    <div className="container">
+    <div className="container my-5">
 
-      <div className="row">
+      <h2 className="fw-bold text-center mb-5" style={{ letterSpacing: ".5px" }}>
+        🛍️ Explore Popular Products
+      </h2>
+
+      <div className="row g-4">
         {products.map((p) => (
-          <div className="col-3 p-3" key={p.id}>
-            <img src={p.image} width="150" height="150" />
-            <h5>{p.title.slice(0, 20)}</h5>
-            <p>Rs. {p.price}</p>
-            <button
-              className="btn btn-success"
-              onClick={() => addToCart(p)}
+          <div className="col-lg-3 col-md-4 col-sm-6" key={p.id}>
+            
+            <div
+              className="card h-100 border-0 shadow-sm product-card"
+              style={{ borderRadius: "15px", transition: "0.3s ease" }}
             >
-              Add to Cart
-            </button>
+              
+              <div className="d-flex justify-content-center p-3">
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="img-fluid"
+                  style={{
+                    height: "220px",
+                    objectFit: "contain",
+                    transition: "0.3s ease"
+                  }}
+                />
+              </div>
+
+              <div className="card-body text-center">
+                <h5 className="fw-bold" style={{ minHeight: "40px" }}>
+                  {p.title.slice(0, 40)}...
+                </h5>
+
+                <h5 className="text-success fw-bold mt-2">
+                  ₹{p.price.toFixed(2)}
+                </h5>
+
+                <div className="d-flex justify-content-center align-items-center mb-3">
+                  <span className="text-dark fw-bold">⭐ {p.rating.rate}</span>
+                  <span className="text-muted ms-2">({p.rating.count})</span>
+                </div>
+                <button
+                  className="btn btn-dark w-100 fw-semibold"
+                  style={{ borderRadius: "10px" }}
+                  onClick={() => addToCart(p)}
+                >
+                  Add to Cart
+                </button>
+              </div>
+
+            </div>
+
           </div>
         ))}
       </div>
+
+      <style>
+        {`
+          .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+          }
+          .product-card img:hover {
+            transform: scale(1.05);
+          }
+        `}
+      </style>
     </div>
   );
 }
 
 export default ProductsPage;
+
