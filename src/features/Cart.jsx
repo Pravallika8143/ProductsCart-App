@@ -52,20 +52,14 @@ function CartPage() {
                 <img 
                   src={i.image}
                   alt={i.title}
-                  className="card-img-top"
-                  style={{ objectFit: "cover",width:"50%" }}
+                  className="card-img-top mx-auto"
+                  style={{ objectFit: "cover",width:"40%" }}
                 />
 
                 <div className="card-body">
                   <h5 className="card-title fw-semibold">{i.title}</h5>
-                  <p className="card-text text-muted">Rs. {i.price}</p>
+                  <p className="card-text">Rs. {i.price}</p>
                 </div>
-
-                {/* <div className="card-footer bg-white border-0">
-                  <button className="btn btn-danger w-100">
-                    Remove Item
-                  </button>
-                </div> */}
               </div>
             </div>
           ))}
